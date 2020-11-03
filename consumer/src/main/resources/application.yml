@@ -1,0 +1,15 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: ConsumerServer
+  cloud:
+    consul:
+      host: 192.168.91.131
+      port: 8500
+    discovery:
+      # 表示注册时使用 ip 而不是 hostname
+      prefer-ip-address: true
+      # 健康检查失败多长时间取消注册
+      health-check-critical-timeout: 10s

@@ -1,0 +1,16 @@
+server:
+  port: 8093
+
+spring:
+  application:
+    name: ProviderServer
+  cloud:
+    consul:
+      host: 192.168.91.136
+      port: 8500
+      discovery:
+        # 表示注册时使用 ip 而不是 hostname
+        prefer-ip-address: true
+        # 健康检查失败多长时间取消注册
+        health-check-critical-timeout: 10s
+
